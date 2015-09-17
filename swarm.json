@@ -1,0 +1,13 @@
+{
+  "name": "$project",
+  "components": {
+    "ipfs-server": {
+      "image": "registry.giantswarm.io/$org/$project",
+      "ports": [$ipfs_port, $api_port],
+      "domains": {
+        "5001/tcp": "$ipfs-domain",
+        "4001/tcp": "$api-domain"
+      }
+    }
+  }     
+}
